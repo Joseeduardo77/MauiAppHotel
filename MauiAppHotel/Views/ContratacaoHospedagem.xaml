@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+             Title="ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="WhiteSmoke"
+             >
+    
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
+        <Label 
+            Text="Cálculo da Diária"
+            FontFamily="ItimRegular"
+            FontSize="47"
+            TextColor="BlueViolet"
+            Margin="9"
+            />
+
+        <Frame Padding="10">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto, Auto"
+                      ColumnDefinitions="*, *, *, 2*">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Adultos:"/>
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           TextColor="{StaticResource White}"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_adultos}"/>
+
+                    <Stepper Grid.Row="0" Grid.Column="2"
+                             x:Name="stp_adultos"
+                             Minimum="0"
+                             Maximum="4"
+                             Increment="1"/>
+                    
+                    <Label Grid.Row="0" Grid.Column="3"
+                           Text="R$ 220,00" HorizontalOptions="End"/>
+
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Crianças:"/>
+                    
+                    <Label Grid.Row="1" Grid.Column="1"
+                      TextColor="{StaticResource White}"
+                      Text="{Binding Value}"
+                      BindingContext="{x:Reference stp_criancas}"/>
+
+                    <Stepper Grid.Row="1" Grid.Column="2"
+                      x:Name="stp_criancas"
+                      Minimum="0"
+                      Maximum="4"
+                      Increment="1"/>
+
+                    <Label Grid.Row="1" Grid.Column="3"
+                     Text="R$ 55,00" HorizontalOptions="End"/>
+
+
+                    <Label Grid.Row="2" Grid.Column="0"
+                     Text="Petz:"/>
+
+                    <Label Grid.Row="2" Grid.Column="1"
+                     TextColor="{StaticResource White}"
+                     Text="{Binding Value}"
+                     BindingContext="{x:Reference stp_petz}"/>
+
+                    <Stepper Grid.Row="2" Grid.Column="2"
+                     x:Name="stp_petz"
+                      Minimum="0"
+                      Maximum="2"
+                      Increment="1"/>
+                    
+                    <Label Grid.Row="2" Grid.Column="3"
+                     Text="R$ 20,00" HorizontalOptions="End"/>
+                </Grid>
+
+                <Label Text="Escolha sua Suíte" Margin="10" HorizontalOptions="Center"/>
+
+                <Picker x:Name="pck_quarto"
+                        Title="Selecione sua Acomodação"
+                        ItemDisplayBinding="{Binding Descricao}"/>
+
+                <Frame Padding="10"
+                       Margin="10" >
+
+                    <VerticalStackLayout>
+                        <Label Text="Período da Estadia" HorizontalOptions="Center"/>
+                        <HorizontalStackLayout>
+                            <Label Text="Check-in: " Margin="11"/>
+                            <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
+                                        Format="dd/MM/yyyy"
+                                        Margin="10"/>
+
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <Label Text="Check-out: " Margin="10"/>
+                            <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy"
+                                        />
+
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                    
+                    </Frame>
+
+                <Button Text="Avançar" TextColor="White" HorizontalOptions="Center" Clicked="Button_Clicked" BackgroundColor="Green"/>
+               
+            </VerticalStackLayout>
+        </Frame>
+        
+    </VerticalStackLayout>
+    
+</ContentPage>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="WhiteSmoke">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+
+        <Label Text="Suíte Super Luxo"
+               TextColor="BlueViolet"
+               FontFamily="ItimRegular"
+               FontSize="50"
+               HorizontalTextAlignment="Center"/>
+
+        <Frame Margin="10">
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <HorizontalStackLayout Margin="3">
+                    <Label Text="Adultos:"/>
+                    <Label Text="2"
+                           TextColor="{StaticResource White}"/>
+                    
+            </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="3">
+                    <Label Text="Crianças:"/>
+                    <Label Text="1"
+                     TextColor="{StaticResource White}"/>
+
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="3">
+                    <Label Text="Petz:"/>
+                    <Label Text="2"
+                     TextColor="{StaticResource White}"
+                       />
+
+                </HorizontalStackLayout>
+
+            </HorizontalStackLayout>
+            
+        </Frame>
+
+        <Frame Margin="10">
+
+            <Grid ColumnDefinitions="*, *, *"
+                  RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in:" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-out:" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia:" HorizontalOptions="Center"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="8/11/2024" HorizontalOptions="Center"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="11/11/2024" HorizontalOptions="Center"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="3 Dias" HorizontalOptions="Center"/>
+
+            </Grid>
+        </Frame>
+        <Frame Margin="10">
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Valor total:" Margin="3"/>
+                <Label Text="R$ 885,00" Margin="3"/>
+            </HorizontalStackLayout>
+
+        </Frame>
+
+        <Button Text="Confirmar Reserva" TextColor="White" HorizontalOptions="Center" BackgroundColor="Green" Margin="10"/>
+        <Button Text="Voltar" TextColor="White" HorizontalOptions="Center" Clicked="Button_Clicked" BackgroundColor="Red"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
