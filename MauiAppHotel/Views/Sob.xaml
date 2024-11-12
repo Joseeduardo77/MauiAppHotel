@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sob"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="WhiteSmoke">
+
+
+    <VerticalStackLayout>
+        <Label
+     Text="Sobre"   
+     FontFamily="ItimRegular"
+     FontSize="50"
+     TextColor="BlueViolet"
+     HorizontalTextAlignment="Center"/>
+
+        <Frame Margin="20">
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <StackLayout Padding="10" Spacing="5">
+                    <Label Text="Situado no centro da cidade, o Hotel oferece" 
+                           
+                            HorizontalOptions="Center" />
+                    <Label Text="conforto e elegância, com quartos modernos" 
+                 
+                HorizontalOptions="Center" />
+                    <Label Text="e vista deslumbrante. Conta com café da " 
+                
+                HorizontalOptions="Start" />
+
+                    <Label Text="manhã variado, Wi-Fi gratuito, centro de" 
+
+                HorizontalOptions="Start" />
+                    <Label Text="bem-estar com academia, spa e piscina." 
+
+                 HorizontalOptions="Start" />
+                    <Label Text="O restaurante serve pratos locais, e a " 
+                        HorizontalOptions="Start" />
+                    <Label Text="é dedicada a tornar a estadia inesquecível."
+                           
+                           HorizontalOptions="Start" />
+
+                </StackLayout>
+            </HorizontalStackLayout>
+
+        </Frame>
+        <Button Text="Voltar" Clicked="Button_Clicked" Margin="20"/>
+
+    </VerticalStackLayout>
+</ContentPage>

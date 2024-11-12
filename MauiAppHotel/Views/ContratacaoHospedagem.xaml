@@ -107,7 +107,8 @@
                     </Frame>
 
                 <Button Text="Avançar" TextColor="White" HorizontalOptions="Center" Clicked="Button_Clicked" BackgroundColor="Green"/>
-               
+                <Button Text="Sobre" Clicked="Button_Clicked_1" TextColor="White" HorizontalOptions="Center" Background="OrangeRed" Margin="6"/>
+
             </VerticalStackLayout>
         </Frame>
         

@@ -45,5 +45,15 @@ public partial class ContratacaoHospedagem : ContentPage
 
     }
 
+    private void Button_Clicked_1(object sender, EventArgs e)
+    {
+		try
+		{
+			Navigation.PushAsync(new Sob());
+		}catch (Exception ex)
+		{
+
+		}
+    }
 }
 
