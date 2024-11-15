@@ -17,7 +17,8 @@
             Margin="9"
             />
 
-        <Frame Padding="10">
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource Gray500}">
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto, Auto"
                       ColumnDefinitions="*, *, *, 2*">
@@ -35,14 +36,14 @@
                              Minimum="0"
                              Maximum="4"
                              Increment="1"/>
-                    
+
                     <Label Grid.Row="0" Grid.Column="3"
                            Text="R$ 220,00" HorizontalOptions="End"/>
 
 
                     <Label Grid.Row="1" Grid.Column="0"
                            Text="Crianças:"/>
-                    
+
                     <Label Grid.Row="1" Grid.Column="1"
                       TextColor="{StaticResource White}"
                       Text="{Binding Value}"
@@ -71,23 +72,33 @@
                       Minimum="0"
                       Maximum="2"
                       Increment="1"/>
-                    
+
                     <Label Grid.Row="2" Grid.Column="3"
                      Text="R$ 20,00" HorizontalOptions="End"/>
                 </Grid>
-
-                <Label Text="Escolha sua Suíte" Margin="10" HorizontalOptions="Center"/>
+                
+                <Label Text="Escolha sua Suíte" HorizontalOptions="Center"
+                       
+                 TextTransform="Uppercase"
+                 FontSize="Subtitle"
+                 TextColor="BlueViolet"/>
 
                 <Picker x:Name="pck_quarto"
                         Title="Selecione sua Acomodação"
                         ItemDisplayBinding="{Binding Descricao}"/>
 
                 <Frame Padding="10"
-                       Margin="10" >
+                       Margin="10"
+                       BackgroundColor="Gray">
 
                     <VerticalStackLayout>
-                        <Label Text="Período da Estadia" HorizontalOptions="Center"/>
-                        <HorizontalStackLayout>
+                        <Label Text="Período da Estadia"
+                               HorizontalOptions="Center"
+                               TextTransform="Uppercase"
+                               FontSize="Subtitle"
+                               TextColor="BlueViolet"
+                               />
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-in: " Margin="11"/>
                             <DatePicker x:Name="dtpck_checkin"
                                         DateSelected="dtpck_checkin_DateSelected"
@@ -95,7 +106,7 @@
                                         Margin="10"/>
 
                         </HorizontalStackLayout>
-                        <HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-out: " Margin="10"/>
                             <DatePicker x:Name="dtpck_checkout"
                                         Format="dd/MM/yyyy"
